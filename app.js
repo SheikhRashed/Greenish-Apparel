@@ -4,7 +4,10 @@ window.onload = function(){
   const nameList = document.querySelector('#name-list');
   const display = document.querySelector('#display');
   const giveTry = document.querySelector('#roll');
-  const position = document.querySelector('#position');
+  const firstPosition = document.querySelector('#Firstposition');
+  const secondPosition = document.querySelector('#Secondposition');
+  const thirdPosition = document.querySelector('#Thirdposition');
+  const fourthPosition = document.querySelector('#Fourthposition');
 
   // create empty array 
   const participantNames = [];
@@ -46,11 +49,23 @@ window.onload = function(){
               let rand = Math.floor(Math.random() * shuffleNames.length);
               display.innerHTML = shuffleNames[rand];
               if(count === shuffleNames.length -1 ) {
-                if(!position.innerHTML) {
-                  position.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
+                if(!firstPosition.innerHTML) {
+                  firstPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
                   let ind = participantNames.indexOf(shuffleNames[rand]);
                   participantNames.splice(ind, 1);
 
+                } else if(!secondPosition.innerHTML){
+                  secondPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
+                  let ind = participantNames.indexOf(shuffleNames[rand]);
+                  participantNames.splice(ind, 1);
+                } else if(!thirdPosition.innerHTML){
+                  thirdPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
+                  let ind = participantNames.indexOf(shuffleNames[rand]);
+                  participantNames.splice(ind, 1);
+                } else if(!fourthPosition.innerHTML){
+                  fourthPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
+                  let ind = participantNames.indexOf(shuffleNames[rand]);
+                  participantNames.splice(ind, 1);
                 } else {
                   alert('Raffle Draw Already Done');
                 }
@@ -85,7 +100,3 @@ function shuffle(arr) {
     return shuffleArr;
 }
 
-
-console.log(shuffle([1,2,3,4,5,6,7,8,9]));
-console.log(shuffle([1,2,3,4,5,6,7,8,9]));
-console.log(shuffle([1,2,3,4,5,6,7,8,9]));
