@@ -7,7 +7,6 @@ window.onload = function(){
   const firstPosition = document.querySelector('#Firstposition');
   const secondPosition = document.querySelector('#Secondposition');
   const thirdPosition = document.querySelector('#Thirdposition');
-  const fourthPosition = document.querySelector('#Fourthposition');
 
   // create empty array 
   const participantNames = [];
@@ -60,10 +59,6 @@ window.onload = function(){
                   participantNames.splice(ind, 1);
                 } else if(!thirdPosition.innerHTML){
                   thirdPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
-                  let ind = participantNames.indexOf(shuffleNames[rand]);
-                  participantNames.splice(ind, 1);
-                } else if(!fourthPosition.innerHTML){
-                  fourthPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
                   let ind = participantNames.indexOf(shuffleNames[rand]);
                   participantNames.splice(ind, 1);
                 } else {
