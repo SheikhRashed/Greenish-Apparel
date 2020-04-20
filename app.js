@@ -7,7 +7,7 @@ window.onload = function(){
   const firstPosition = document.querySelector('#Firstposition');
   const secondPosition = document.querySelector('#Secondposition');
   const thirdPosition = document.querySelector('#Thirdposition');
-  const fourthPosition = document.querySelector('#Thirdposition');
+  const fourthPosition = document.querySelector('#fourthposition');
 
   // create empty array 
   const participantNames = [];
