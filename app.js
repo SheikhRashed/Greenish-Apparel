@@ -63,7 +63,7 @@ window.onload = function(){
                   let ind = participantNames.indexOf(shuffleNames[rand]);
                   participantNames.splice(ind, 1);
                 }  else if(!fourthPosition.innerHTML){
-                  secondPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
+                  fourthPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
                   let ind = participantNames.indexOf(shuffleNames[rand]);
                   participantNames.splice(ind, 1);
                 }  else {
