@@ -7,6 +7,7 @@ window.onload = function(){
   const firstPosition = document.querySelector('#Firstposition');
   const secondPosition = document.querySelector('#Secondposition');
   const thirdPosition = document.querySelector('#Thirdposition');
+  const fourthPosition = document.querySelector('#Thirdposition');
 
   // create empty array 
   const participantNames = [];
@@ -61,7 +62,11 @@ window.onload = function(){
                   thirdPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
                   let ind = participantNames.indexOf(shuffleNames[rand]);
                   participantNames.splice(ind, 1);
-                } else {
+                }  else if(!fourthPosition.innerHTML){
+                  secondPosition.innerHTML = `<a href="${shuffleNames[rand]}" target="_blank">${shuffleNames[rand]}</a>`;
+                  let ind = participantNames.indexOf(shuffleNames[rand]);
+                  participantNames.splice(ind, 1);
+                }  else {
                   alert('Raffle Draw Already Done');
                 }
               }
